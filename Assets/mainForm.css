@@ -1,0 +1,38 @@
+div.tab{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+div.tab button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.5s;
+}
+
+div.tab button:hover{
+    backgournd-color: #ddd;
+}
+
+div.tab button:hover{
+    background-color: #ccc;
+}
+
+div.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+body{
+    background-image: url("https://image.shutterstock.com/z/stock-vector-medical-pharmacy-logo-design-template-vector-illustrator-428173246.jpg");
+    background-repeat: no-repeat;
+
+    color: darkblue;
+    font-family: "Arial Black";
+}
