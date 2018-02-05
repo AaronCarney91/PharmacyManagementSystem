@@ -6,6 +6,9 @@ require "helpers.php";
 
 use App\Controllers\Controller;
 
+// BASE DIR
+const BASE_DIR = __DIR__;
+
 // Get the controller from the URL and instantiate it for use.
 $url_ctrl = $_REQUEST['controller'];
 

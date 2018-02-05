@@ -16,7 +16,7 @@ abstract class Controller
     protected function view($view_name, $data = [])
     {
         //Where to look for Controllers form. E.G LoginController opens View/Login/index.php
-        $view_file = 'Views/' . $this->viewFolder() . '/' . $view_name . '.php';
+        $view_file = BASE_DIR . '/public/views/' . $this->viewFolder() . '/' . $view_name . '.php';
 
         //Does file exist?
         if(!file_exists($view_file)) {
