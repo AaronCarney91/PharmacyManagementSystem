@@ -2,6 +2,7 @@
 session_start();
 
 require __DIR__ . "/vendor/autoload.php";
+require "helpers.php";
 
 use App\Controllers\Controller;
 
@@ -55,5 +56,3 @@ if (file_exists("App/Controllers/".$ctrl_filename)) {
 
 //If Controller cannot be found
 echo "404 - not found";
-
-?>
