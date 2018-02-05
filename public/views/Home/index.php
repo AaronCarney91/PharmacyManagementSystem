@@ -1,6 +1,6 @@
 <html>
 <head> <title> <?php echo "Carney's Chemist"; ?> </title> </head>
-<head>  <link rel="stylesheet" type="text/css" href="<?php echo asset('mainForm.css'); ">   </head>
+<head>  <link rel="stylesheet" type="text/css" href="mainForm.css">   </head>
 
 <body>
     <div class="tab">
@@ -14,35 +14,35 @@
     <div id="Patient" class="tabcontent">
         <h1> Patient Tab </h1>
         <?php
-        include("Views/Partials/_PatientForm.php");
+        include("../Partials/_PatientForm.php");
         ?>
     </div>
 
     <div id="Staff" class="tabcontent">
         <h1>Staff Tab</h1>
         <?php
-        include("Views/Partials/_StaffForm.php");
+        include("public/views/Partials/_StaffForm.php");
         ?>
     </div>
 
     <div id="Drug" class="tabcontent">
         <h1>Staff Tab</h1>
         <?php
-        include("Views/Partials/_DrugForm.php");
+        include("public/views/Partials/_DrugForm.php");
         ?>
     </div>
 
     <div id="Dispense" class="tabcontent">
         <h1>Dispense Tab</h1>
         <?php
-        include("Views/Partials/_DispenseForm.php");
+        include("public/views/Partials/_DispenseForm.php");
         ?>
     </div>
 
     <div id="Register" class="tabcontent">
         <h1>Register Patient</h1>
         <?php
-        include("Views/Partials/_RegForm.php");
+        include("public/views/Partials/_RegForm.php");
         ?>
     </div>
 
