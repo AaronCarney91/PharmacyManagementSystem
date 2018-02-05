@@ -10,8 +10,8 @@ class Drug extends DataAccessObj
     function __construct()
     {
         parent::__construct();
-        $this->id = 'drugid';
-        $this->table = 'Drug';
+        $this->id = 'id';
+        $this->table = 'drugs';
         $this->name = 'drugName';
     }
 

@@ -2,9 +2,13 @@
 
 namespace App\Database;
 
-define('DB_DATA_SOURCE', 'mysql:host=localhost;dbname=pharmacy');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_DATA_SOURCE', 'mysql:host='.config('database.host').';dbname='.config('database.dbname'));
+define('DB_USERNAME', config('database.username'));
+define('DB_PASSWORD', config('database.password'));
+
+//define('DB_DATA_SOURCE', 'mysql:host=localhost;dbname=pharmacy;port=3306');
+//define('DB_USERNAME', 'root');
+//define('DB_PASSWORD', 'password');
 
 use \PDO;
 
@@ -14,13 +18,14 @@ class Database
 
     function __construct()
     {
-        $this->connectToDB(DB_USERNAME, DB_DATA_SOURCE);
+        $this->connectToDB(DB_USERNAME, DB_DATA_SOURCE, DB_PASSWORD);
     }
 
     //Connect to Database
-    function connectToDB($user, $database)
+    function connectToDB($user, $database, $password)
     {
-        $this->connection = new PDO($database, $user);
+        $params = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC);
+        $this->connection = new PDO($database, $user, $password, $params);
     }
 
     //Run queries to fetch data
@@ -42,10 +47,4 @@ class Database
     {
         $this->connection->exec($q);
     }
-
-
-
 }
-
-
-?>
