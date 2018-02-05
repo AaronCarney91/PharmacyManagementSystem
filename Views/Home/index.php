@@ -1,6 +1,6 @@
 <html>
 <head> <title> <?php echo "Carney's Chemist"; ?> </title> </head>
-<head>  <link rel="stylesheet" type="text/css" href="Assets/mainForm.css">   </head>
+<head>  <link rel="stylesheet" type="text/css" href="<?php echo asset('mainForm.css'); ?>">   </head>
 
 <body>
     <div class="tab">
