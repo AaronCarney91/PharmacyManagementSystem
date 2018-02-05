@@ -10,8 +10,8 @@ class Staff extends DataAccessObj
     function __construct()
     {
         parent::__construct();
-        $this->id = 'staffid';
-        $this->table = 'Staff';
+        $this->id = 'id';
+        $this->table = 'staff';
         $this->name = 'staffName';
     }
 

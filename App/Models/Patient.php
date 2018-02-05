@@ -10,8 +10,8 @@ class Patient extends DataAccessObj
     function __construct()
     {
         parent::__construct();
-        $this->id = 'patid';
-        $this->table = 'Patient';
+        $this->id = 'id';
+        $this->table = 'patients';
         $this->name = 'patName';
     }
 

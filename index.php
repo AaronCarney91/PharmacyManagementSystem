@@ -2,8 +2,12 @@
 session_start();
 
 require __DIR__ . "/vendor/autoload.php";
+require "helpers.php";
 
 use App\Controllers\Controller;
+
+// BASE DIR
+const BASE_DIR = __DIR__;
 
 // Get the controller from the URL and instantiate it for use.
 $url_ctrl = $_REQUEST['controller'];
@@ -55,5 +59,3 @@ if (file_exists("App/Controllers/".$ctrl_filename)) {
 
 //If Controller cannot be found
 echo "404 - not found";
-
-?>
